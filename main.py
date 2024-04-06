@@ -1,4 +1,5 @@
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
+from ZoriFileReader.ZoriCityFileReader import ZoriCityFileReader
 
 
 def zoriMetroDriver():
@@ -14,8 +15,16 @@ def zoriMetroDriver():
     print("results from zori_metro.csv")
 
 
+def zoriCityDriver():
+    zoriCityFileReader = ZoriCityFileReader()
+    fileHandle = zoriCityFileReader.getFileHandle()
+    dataDict = zoriCityFileReader.getDataDictFromFile(fileHandle)
+    print(dataDict)
+
+
 def main():
-    zoriMetroDriver()
+    # zoriMetroDriver()
+    zoriCityDriver()
 
 
 main()
