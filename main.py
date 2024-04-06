@@ -1,5 +1,5 @@
+from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
-from ZoriFileReader.ZoriCityFileReader import ZoriCityFileReader
 
 
 def zoriMetroDriver():
@@ -16,13 +16,16 @@ def zoriMetroDriver():
 
 
 def zoriCityDriver():
-    zoriCityFileReader = ZoriCityFileReader()
-    fileHandle = zoriCityFileReader.getFileHandle()
-    dataDict = zoriCityFileReader.getDataDictFromFile(fileHandle)
-    print(dataDict)
+    dataProcessor = CityZoriDataProcessor()
+    yearStart = 2022
+    yearEnd = 2024
+    dataProcessor.listAverageZORIOfLocationsInMetroOverRange(
+        "los angeles", yearStart, yearEnd)
+    print("results from zori_city.csv")
 
 
 def main():
+    # uncomment the driver function to be run
     # zoriMetroDriver()
     zoriCityDriver()
 
