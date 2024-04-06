@@ -1,7 +1,7 @@
 from ZoriFileReader.ZoriFileReader import ZoriFileReader
 
 
-class ZoriMetroFileReader(ZoriFileReader):
+class MetroZoriFileReader(ZoriFileReader):
     def __init__(self):
         super().__init__("data/zori_metro.csv")
 

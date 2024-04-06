@@ -1,10 +1,10 @@
 from DataProcessor.ZoriDataProcessor import ZoriDataProcessor
-from ZoriFileReader.ZoriMetroFileReader import ZoriMetroFileReader
+from ZoriFileReader.MetroZoriFileReader import MetroZoriFileReader
 
 
 class MetroZoriDataProcessor(ZoriDataProcessor):
     def __init__(self):
-        zoriMetroFileReader = ZoriMetroFileReader()
+        zoriMetroFileReader = MetroZoriFileReader()
         super().__init__(zoriMetroFileReader, offsetForRentNumbers=5)
 
     def getRowByLocationName(self, locationName: str) -> list[str]:
