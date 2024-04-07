@@ -1,4 +1,4 @@
-from ZoriFileReader.ZoriFileReader import ZoriFileReader
+from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
 
 
 class ZoriDataProcessor:

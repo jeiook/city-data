@@ -1,5 +1,5 @@
 from DataProcessor.ZoriDataProcessor import ZoriDataProcessor
-from ZoriFileReader.CityZoriFileReader import CityZoriFileReader
+from FileReader.ZoriFileReader.CityZoriFileReader import CityZoriFileReader
 
 
 class CityZoriDataProcessor(ZoriDataProcessor):

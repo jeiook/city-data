@@ -1,5 +1,5 @@
 from DataProcessor.ZoriDataProcessor import ZoriDataProcessor
-from ZoriFileReader.MetroZoriFileReader import MetroZoriFileReader
+from FileReader.ZoriFileReader.MetroZoriFileReader import MetroZoriFileReader
 
 
 class MetroZoriDataProcessor(ZoriDataProcessor):
