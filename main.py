@@ -1,6 +1,7 @@
 from ApiDataRetriever.Census.CensusApiDataRetriever import CensusApiDataRetriever
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
+from OutputHandler.FileOutputHandler import FileOutputHandler
 
 
 def zoriMetroDriver():
@@ -27,7 +28,8 @@ def zoriCityDriver():
 
 def censusDriver():
     dataRetriever = CensusApiDataRetriever()
-    print(dataRetriever.listPlacesInCalifornia())
+    outputHandler = FileOutputHandler("data/places_in_california.tsv")
+    outputHandler.outputListData(dataRetriever.listPlacesInCalifornia())
 
 
 def main():
