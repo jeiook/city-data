@@ -6,11 +6,11 @@ class ZoriFileReader(FileReader):
         super().__init__(fileName)
 
     def _splitLinesWithQuotesIntoTokens(self, line: str) -> list[str]:
-        quoteSplitLine = line.split("\"")
+        quoteSplitLine = line.strip().split("\"")
         tokens = []
         for i, partialLine in enumerate(quoteSplitLine):
             if i % 2 == 0:
-                tokens += [value for value in partialLine.split(",") if value]
+                tokens += partialLine.strip(",").split(",")
                 continue
             tokens += [partialLine]
         return tokens

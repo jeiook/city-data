@@ -1,10 +1,13 @@
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
 from FileReader.CensusFileReader.CensusTsvFileReader import CensusTsvFileReader
+from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
 
 
 def zoriMetroDriver():
-    dataProcessor = MetroZoriDataProcessor()
+    fileReader = ZoriFileReader("data/zori_metro.csv")
+    dataProcessor = MetroZoriDataProcessor(
+        fileReader.getDataDictFromFile())
     yearStart = 2022
     yearEnd = 2024
     metroNames = ["rochester", "baltimore", "madison", "st. louis", "chicago", "buffalo", "minneapolis", "philadelphia",
@@ -17,7 +20,8 @@ def zoriMetroDriver():
 
 
 def zoriCityDriver():
-    dataProcessor = CityZoriDataProcessor()
+    fileReader = ZoriFileReader("data/zori_city.csv")
+    dataProcessor = CityZoriDataProcessor(fileReader.getDataDictFromFile())
     yearStart = 2022
     yearEnd = 2024
     dataProcessor.listAverageZORIOfLocationsInMetroOverRange(
@@ -30,9 +34,10 @@ def censusDriver():
     dataDict = fileReader.getDataDictFromFile()
     print("columns:", dataDict["columns"])
     print("a few rows:")
-    print(dataDict["rows"][0][:6])
-    print(dataDict["rows"][1][:6])
-    print(dataDict["rows"][2][:6])
+    print(dataDict["rows"][0])
+    print(dataDict["rows"][1])
+    print(dataDict["rows"][2])
+    print(dataDict["rows"][-1])
 
 
 def main():

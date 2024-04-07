@@ -1,10 +1,6 @@
-from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
-
-
 class ZoriDataProcessor:
-    def __init__(self, fileReader: ZoriFileReader, offsetForRentNumbers: int):
-        self.fileReader = fileReader
-        self.dataDict = fileReader.getDataDictFromFile()
+    def __init__(self, dataDict: dict, offsetForRentNumbers: int):
+        self.dataDict = dataDict
         self.offsetForRentNumbers = offsetForRentNumbers
         minYear = self.dataDict["columns"][offsetForRentNumbers].split(
             "-")[0]
