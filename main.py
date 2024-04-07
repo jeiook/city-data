@@ -1,9 +1,6 @@
-from ApiDataRetriever.Census.CensusApiDataRetriever import CensusApiDataRetriever
-from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
-from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
-from OutputHandler.FileOutputHandler import FileOutputHandler
+from FileReader.CensusFileReader.CensusTsvFileReader import CensusTsvFileReader
 
 
 def zoriMetroDriver():
@@ -29,30 +26,20 @@ def zoriCityDriver():
 
 
 def censusDriver():
-    dataRetriever = CensusApiDataRetriever()
-    apiRouteHandler = CensusApiRouteHandler()
-    listData = dataRetriever.getDataFromAPIRequestToPath(
-        apiRouteHandler.getListPlacesInCalifornia())
-    outputHandler = FileOutputHandler("data/places_in_california.tsv")
-    outputHandler.outputListData(listData)
-
-
-def zoriFileReaderDriver():
-    fileReader = ZoriFileReader("")
-    print(fileReader.splitLineIntoTokens(
-        "102001,0,United States,country,,1222.8126117105548"))
-    print(fileReader.splitLineIntoTokens(
-        "394913,1,\"New York, NY\",msa,NY,2286.9183201876376"))
-    print(fileReader.splitLineIntoTokens(
-        "753899,2,\"Los Angeles, CA\",msa,CA,1833.2128308607282"))
+    fileReader = CensusTsvFileReader("data/places_in_california.tsv")
+    dataDict = fileReader.getDataDictFromFile()
+    print("columns:", dataDict["columns"])
+    print("a few rows:")
+    print(dataDict["rows"][0][:6])
+    print(dataDict["rows"][1][:6])
+    print(dataDict["rows"][2][:6])
 
 
 def main():
     # uncomment the driver function to be run
     # zoriMetroDriver()
     # zoriCityDriver()
-    # censusDriver()
-    zoriFileReaderDriver()
+    censusDriver()
 
 
 main()
