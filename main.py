@@ -1,4 +1,4 @@
-from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
+from ApiDataRetriever.Census.CensusApiDataRetriever import CensusApiDataRetriever
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
 
@@ -26,9 +26,8 @@ def zoriCityDriver():
 
 
 def censusDriver():
-    apiRouteHandler = CensusApiRouteHandler()
-    print(apiRouteHandler.getFullApiPath("listStates"))
-    print(apiRouteHandler.getFullApiPath("listPlacesInCalifornia"))
+    dataRetriever = CensusApiDataRetriever()
+    print(dataRetriever.listPlacesInCalifornia())
 
 
 def main():
