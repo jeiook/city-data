@@ -1,357 +1,143 @@
-NAME	K200101_001E	state	place
-Agoura Hills city, California	20594	06	00394
-Adelanto city, California	38781	06	00296
+NAME	S0101_C01_001E	state	place
 Alameda city, California	76039	06	00562
-Albany city, California	19370	06	00674
 Alhambra city, California	80264	06	00884
-Aliso Viejo city, California	51228	06	00947
-Altadena CDP, California	38417	06	01290
-American Canyon city, California	19889	06	01640
 Anaheim city, California	344462	06	02000
-Antelope CDP, California	46871	06	02210
 Antioch city, California	115268	06	02252
 Apple Valley town, California	75856	06	02364
-Arcadia city, California	54865	06	02462
-Arcata city, California	21216	06	02476
 Arden-Arcade CDP, California	95936	06	02553
-Arvin city, California	20461	06	02924
-Ashland CDP, California	21757	06	02980
-Atascadero city, California	29685	06	03064
-Atwater city, California	32374	06	03162
-Azusa city, California	48819	06	03386
 Bakersfield city, California	410654	06	03526
 Baldwin Park city, California	69450	06	03666
-Banning city, California	30686	06	03820
-Bell city, California	32466	06	04870
-Barstow city, California	25232	06	04030
-Bay Point CDP, California	23892	06	04415
-Beaumont city, California	56346	06	04758
 Bellflower city, California	76405	06	04982
-Bell Gardens city, California	37926	06	04996
-Belmont city, California	26771	06	05108
-Benicia city, California	26574	06	05290
 Berkeley city, California	118942	06	06000
-Beverly Hills city, California	31323	06	06308
-Bloomington CDP, California	27023	06	07064
-Brawley city, California	26862	06	08058
-Brea city, California	46986	06	08100
 Brentwood city, California	66120	06	08142
 Buena Park city, California	82451	06	08786
 Burbank city, California	103919	06	08954
-Burlingame city, California	30552	06	09066
-Calabasas city, California	25830	06	09598
-Calexico city, California	38245	06	09710
 Camarillo city, California	70287	06	10046
-Campbell city, California	42292	06	10345
 Carlsbad city, California	114161	06	11194
 Carmichael CDP, California	82145	06	11390
 Carson city, California	92391	06	11530
-Casa de Oro-Mount Helix CDP, California	20907	06	11691
 Castro Valley CDP, California	66506	06	11964
 Chico city, California	101304	06	13014
-Cathedral City city, California	52496	06	12048
-Ceres city, California	48997	06	12524
-Cerritos city, California	47487	06	12552
 Chino city, California	93149	06	13210
 Chino Hills city, California	77923	06	13214
 Chula Vista city, California	279158	06	13392
 Citrus Heights city, California	86440	06	13588
-Claremont city, California	36002	06	13756
 Clovis city, California	124546	06	14218
-Coachella city, California	42827	06	14260
-Coalinga city, California	25145	06	14274
-Colton city, California	53928	06	14890
 Compton city, California	91979	06	15044
 Concord city, California	122616	06	16000
-Corcoran city, California	21911	06	16224
 Corona city, California	159534	06	16350
 Costa Mesa city, California	109527	06	16532
-Covina city, California	49478	06	16742
-Cudahy city, California	21557	06	17498
-Culver City city, California	39524	06	17568
-Cupertino city, California	57846	06	17610
-Cypress city, California	49246	06	17750
 Daly City city, California	99990	06	17918
-Dana Point city, California	32456	06	17946
-Danville town, California	42720	06	17988
 Davis city, California	67057	06	18100
-Delano city, California	50838	06	18394
-Desert Hot Springs city, California	33092	06	18996
-Diamond Bar city, California	52847	06	19192
-Dinuba city, California	25274	06	19318
-Dixon city, California	20642	06	19402
 Downey city, California	109908	06	19766
-Duarte city, California	26511	06	19990
 Dublin city, California	72061	06	20018
-Eastern Goleta Valley CDP, California	26382	06	20574
 East Los Angeles CDP, California	112965	06	20802
-East Niles CDP, California	29862	06	20903
-East Palo Alto city, California	28383	06	20956
-East San Gabriel CDP, California	22140	06	21096
 Eastvale city, California	71015	06	21230
 El Cajon city, California	104417	06	21712
-El Centro city, California	43805	06	21782
-El Cerrito city, California	25584	06	21796
-El Dorado Hills CDP, California	49319	06	21880
 Elk Grove city, California	177558	06	22020
 El Monte city, California	105307	06	22230
-El Paso de Robles (Paso Robles) city, California	31543	06	22300
-Encinitas city, California	61365	06	22678
 Escondido city, California	150258	06	22804
-Fallbrook CDP, California	32048	06	23462
-Eureka city, California	26131	06	23042
 Fairfield city, California	119333	06	23182
-Fair Oaks CDP, California	32375	06	23294
-Florence-Graham CDP, California	57334	06	24477
-Florin CDP, California	48805	06	24498
 Folsom city, California	83273	06	24638
 Fontana city, California	212448	06	24680
-Foothill Farms CDP, California	35085	06	24722
-Foster City city, California	32019	06	25338
-Fountain Valley city, California	55918	06	25380
 Fremont city, California	223859	06	26000
-French Valley CDP, California	41325	06	26067
 Fresno city, California	545564	06	27000
 Fullerton city, California	140552	06	28000
-Galt city, California	25408	06	28112
-Gardena city, California	58827	06	28168
 Garden Grove city, California	169265	06	29000
-Gilroy city, California	58001	06	29504
 Glendale city, California	189228	06	30000
-Glendora city, California	50817	06	30014
-Goleta city, California	32415	06	30378
-Granite Bay CDP, California	20196	06	30693
-Hacienda Heights CDP, California	56231	06	31596
-Hanford city, California	58484	06	31960
 Hawthorne city, California	84564	06	32548
 Hayward city, California	156773	06	33000
 Hemet city, California	90688	06	33182
-Hercules city, California	25915	06	33308
 Hesperia city, California	100766	06	33434
-Huntington Park city, California	52632	06	36056
-Highland city, California	56701	06	33588
-Hollister city, California	47467	06	34120
 Huntington Beach city, California	194306	06	36000
-Imperial city, California	21917	06	36280
-Imperial Beach city, California	25796	06	36294
 Indio city, California	91991	06	36448
 Inglewood city, California	103628	06	36546
 Irvine city, California	313705	06	36770
 Jurupa Valley city, California	107603	06	37692
-La Cañada Flintridge city, California	20329	06	39003
-Ladera Ranch CDP, California	24957	06	39114
-Lafayette city, California	25049	06	39122
-Laguna Beach city, California	21013	06	39178
-Laguna Hills city, California	30556	06	39220
-Laguna Niguel city, California	63755	06	39248
-La Habra city, California	61974	06	39290
 Lake Elsinore city, California	71905	06	39486
 Lake Forest city, California	85635	06	39496
-Lakeside CDP (San Diego County), California	19872	06	39766
 Lakewood city, California	79042	06	39892
-La Mesa city, California	60345	06	40004
-La Mirada city, California	46315	06	40032
 Lancaster city, California	169192	06	40130
-La Presa CDP, California	36349	06	40326
-La Puente city, California	36637	06	40340
-La Quinta city, California	38390	06	40354
-Lemon Grove city, California	27227	06	41124
-Lathrop city, California	33662	06	40704
-La Verne city, California	30399	06	40830
-Lawndale city, California	30589	06	40886
-Lemoore city, California	27186	06	41152
-Lincoln city, California	52541	06	41474
-Linda CDP, California	19808	06	41572
 Livermore city, California	84722	06	41992
 Lodi city, California	67273	06	42202
-Loma Linda city, California	25127	06	42370
-Lomita city, California	22507	06	42468
-Lompoc city, California	43748	06	42524
 Long Beach city, California	451319	06	43000
-Los Altos city, California	30424	06	43280
 Los Angeles city, California	3822224	06	44000
-Los Banos city, California	47049	06	44028
-Los Gatos town, California	32401	06	44112
 Lynwood city, California	64081	06	44574
 Madera city, California	68042	06	45022
-Manhattan Beach city, California	34155	06	45400
 Manteca city, California	86940	06	45484
-Marina city, California	21104	06	45778
-Martinez city, California	36444	06	46114
-Maywood city, California	24120	06	46492
-Mead Valley CDP, California	20749	06	46646
 Menifee city, California	109399	06	46842
-Menlo Park city, California	32286	06	46870
 Merced city, California	91572	06	46898
-Millbrae city, California	21551	06	47486
 Milpitas city, California	77744	06	47766
 Mission Viejo city, California	91775	06	48256
 Modesto city, California	218071	06	48354
-Monrovia city, California	36904	06	48648
-Montclair city, California	37700	06	48788
-Montebello city, California	60561	06	48816
-Monterey city, California	29570	06	48872
-Monterey Park city, California	58537	06	48914
-Moorpark city, California	35511	06	49138
 Moreno Valley city, California	211915	06	49270
-Morgan Hill city, California	44982	06	49278
-Mountain House CDP, California	26509	06	49582
 Mountain View city, California	81058	06	49670
 Murrieta city, California	113774	06	50076
 Napa city, California	78308	06	50258
-National City city, California	55536	06	50398
-Newark city, California	47290	06	50916
 Newport Beach city, California	83981	06	51182
-Norco city, California	25052	06	51560
-North Highlands CDP, California	47149	06	51924
-North Tustin CDP, California	21760	06	52379
 Norwalk city, California	98537	06	52526
-Novato city, California	52191	06	52582
-Oakdale city, California	21703	06	52694
 Oakland city, California	430531	06	53000
-Oakley city, California	44679	06	53070
 Oceanside city, California	172190	06	53322
-Oildale CDP, California	37893	06	53448
-Olivehurst CDP, California	21812	06	53714
 Ontario city, California	179062	06	53896
-Oroville city, California	22742	06	54386
 Orange city, California	136175	06	53980
-Orangevale CDP, California	34288	06	54092
-Orcutt CDP, California	33541	06	54120
 Oxnard city, California	200437	06	54652
-Pacifica city, California	36521	06	54806
 Palmdale city, California	163455	06	55156
-Palm Desert city, California	51585	06	55184
-Palm Springs city, California	45225	06	55254
 Palo Alto city, California	66021	06	55282
-Paramount city, California	51648	06	55618
 Pasadena city, California	134214	06	56000
-Patterson city, California	23950	06	56112
 Perris city, California	80258	06	56700
-Petaluma city, California	58642	06	56784
-Pico Rivera city, California	59794	06	56924
 Pittsburg city, California	77585	06	57456
-Placentia city, California	51957	06	57526
-Pleasant Hill city, California	33915	06	57764
 Pleasanton city, California	76689	06	57792
 Pomona city, California	146015	06	58072
-Porterville city, California	62998	06	58240
-Port Hueneme city, California	20775	06	58296
-Poway city, California	48088	06	58520
-Prunedale CDP, California	21084	06	58870
-Ramona CDP, California	26178	06	59346
 Rancho Cordova city, California	80594	06	59444
 Rancho Cucamonga city, California	176359	06	59451
-Rancho Palos Verdes city, California	40525	06	59514
-Rancho San Diego CDP, California	23107	06	59550
-Rancho Santa Margarita city, California	46731	06	59587
 Redding city, California	92896	06	59920
 Redlands city, California	73853	06	59962
 Redondo Beach city, California	68908	06	60018
 Redwood City city, California	80529	06	60102
-Reedley city, California	25448	06	60242
 Rialto city, California	103564	06	60466
 Richmond city, California	114287	06	60620
-Ridgecrest city, California	28343	06	60704
-Riverbank city, California	24816	06	61068
 Riverside city, California	320785	06	62000
 Rocklin city, California	73850	06	62364
-Rohnert Park city, California	44325	06	62546
-Rosamond CDP, California	20434	06	62826
-Rosedale CDP, California	19714	06	62854
-Rosemead city, California	49789	06	62896
-Rosemont CDP, California	21340	06	62910
 Roseville city, California	154826	06	62938
-Rowland Heights CDP, California	41612	06	63218
 Sacramento city, California	528026	06	64000
 Salinas city, California	161019	06	64224
 San Bernardino city, California	220314	06	65000
-San Bruno city, California	41540	06	65028
 San Buenaventura (Ventura) city, California	109528	06	65042
-San Carlos city, California	29578	06	65070
-San Clemente city, California	63451	06	65084
 San Diego city, California	1381182	06	66000
-San Dimas city, California	33535	06	66070
-San Fernando city, California	24610	06	66140
 San Francisco city, California	808437	06	67000
-San Gabriel city, California	38143	06	67042
-Sanger city, California	26595	06	67056
-San Jacinto city, California	55462	06	67112
-San Lorenzo CDP, California	28620	06	68112
 San Jose city, California	971265	06	68000
-San Juan Capistrano city, California	34541	06	68028
 San Leandro city, California	86761	06	68084
-San Luis Obispo city, California	48341	06	68154
 San Marcos city, California	94855	06	68196
 San Mateo city, California	100996	06	68252
-San Pablo city, California	31392	06	68294
-San Rafael city, California	59981	06	68364
 San Ramon city, California	85959	06	68378
 Santa Ana city, California	308203	06	69000
 Santa Barbara city, California	87519	06	69070
 Santa Clara city, California	126920	06	69084
 Santa Clarita city, California	221362	06	69088
-Santa Cruz city, California	61801	06	69112
 Santa Maria city, California	110124	06	69196
 Santa Monica city, California	89951	06	70000
-Santa Paula city, California	31014	06	70042
 Santa Rosa city, California	177185	06	70098
-Santee city, California	59046	06	70224
-Saratoga city, California	29903	06	70280
-Seal Beach city, California	24621	06	70686
-Seaside city, California	31479	06	70742
-Selma city, California	24436	06	70882
-Shafter city, California	24438	06	71106
 Simi Valley city, California	124395	06	72016
-Soledad city, California	24190	06	72520
 South Gate city, California	90935	06	73080
-South Pasadena city, California	25854	06	73220
-South San Francisco city, California	63481	06	73262
-South Whittier CDP, California	48313	06	73430
-Spring Valley CDP (San Diego County), California	29316	06	73696
-Stanford CDP, California	21090	06	73906
-Stanton city, California	38952	06	73962
-Stevenson Ranch CDP, California	19471	06	74130
 Stockton city, California	321796	06	75000
-Suisun City city, California	28943	06	75630
 Sunnyvale city, California	153076	06	77000
-Thousand Oaks city, California	124257	06	78582
 Temecula city, California	111763	06	78120
-Temescal Valley CDP, California	30217	06	78138
-Temple City city, California	35291	06	78148
+Thousand Oaks city, California	124257	06	78582
 Torrance city, California	141127	06	80000
 Tracy city, California	97328	06	80238
 Tulare city, California	70690	06	80644
 Turlock city, California	72307	06	80812
 Tustin city, California	78412	06	80854
-Twentynine Palms city, California	28148	06	80994
 Union City city, California	67049	06	81204
 Upland city, California	78851	06	81344
 Vacaville city, California	101898	06	81554
-Valinda CDP, California	23320	06	81638
 Vallejo city, California	123583	06	81666
 Victorville city, California	137224	06	82590
-Vineyard CDP, California	44178	06	82852
 Visalia city, California	143965	06	82954
 Vista city, California	97766	06	82996
-Walnut city, California	27362	06	83332
 Walnut Creek city, California	68969	06	83346
-Wasco city, California	27736	06	83542
-Watsonville city, California	51528	06	83668
-West Carson CDP, California	22354	06	84144
 West Covina city, California	105032	06	84200
-West Hollywood city, California	34509	06	84410
 Westminster city, California	89399	06	84550
-Westmont CDP, California	38974	06	84592
-West Puente Valley CDP, California	19540	06	84774
-West Rancho Dominguez CDP, California	23957	06	84780
-West Sacramento city, California	55063	06	84816
 Whittier city, California	84503	06	85292
-Wildomar city, California	37219	06	85446
 Yorba Linda city, California	67077	06	86832
-Windsor town, California	25782	06	85922
-Winter Gardens CDP, California	21958	06	85992
-Woodland city, California	61454	06	86328
 Yuba City city, California	69004	06	86972
-Yucaipa city, California	54406	06	87042
-Yucca Valley town, California	21969	06	87056
