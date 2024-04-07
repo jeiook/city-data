@@ -1,6 +1,6 @@
-from ApiDataRetriever.ApiRouteHandler import ApiRouteHandler
+import requests
 
 
 class ApiDataRetriever:
     def getDataFromAPIRequestToPath(self, path: str):
-        raise NotImplementedError("Please implement this method")
+        return requests.get(path).json()
