@@ -1,25 +1,22 @@
-class ZoriFileReader:
-    def __init__(self, fileName):
-        self.fileName = fileName
+from FileReader.FileReader import FileReader
 
-    def getFileHandle(self):
-        raise NotImplementedError("Please implement this method")
 
-    def _getColumns(self, file):
-        return file.readline()[:-1].split(",")
+class ZoriFileReader(FileReader):
+    def __init__(self, fileName: str):
+        super().__init__(fileName)
 
-    def _getRestOfFile(self, file):
-        raise NotImplementedError("Please implement this method")
+    def _splitLinesWithQuotesIntoTokens(self, line: str) -> list[str]:
+        quoteSplitLine = line.split("\"")
+        tokens = []
+        for i, partialLine in enumerate(quoteSplitLine):
+            if i % 2 == 0:
+                tokens += [value for value in partialLine.split(",") if value]
+                continue
+            tokens += [partialLine]
+        return tokens
 
-    def _getArrayFromCSVLine(self, line):
-        raise NotImplementedError("Please implement this method")
-
-    def getDataDictFromFile(self, file):
-        columns = self._getColumns(file)
-        restOfFile = self._getRestOfFile(file)
-        dataDict = dict()
-        dataDict["columns"] = columns
-        dataDict["rows"] = []
-        for line in restOfFile:
-            dataDict["rows"].append(self._getArrayFromCSVLine(line))
-        return dataDict
+    def splitLineIntoTokens(self, line: str) -> list[str]:
+        strippedLine = line.strip()
+        if "\"" in strippedLine:
+            return self._splitLinesWithQuotesIntoTokens(strippedLine)
+        return strippedLine.split(",")

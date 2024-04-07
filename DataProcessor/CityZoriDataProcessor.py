@@ -1,11 +1,10 @@
 from DataProcessor.ZoriDataProcessor import ZoriDataProcessor
-from FileReader.ZoriFileReader.CityZoriFileReader import CityZoriFileReader
+from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
 
 
 class CityZoriDataProcessor(ZoriDataProcessor):
     def __init__(self):
-        fileReader = CityZoriFileReader()
-        super().__init__(fileReader, offsetForRentNumbers=8)
+        super().__init__(ZoriFileReader("data/zori_city.csv"), offsetForRentNumbers=8)
 
     def _getRowsByMetroName(self, metroName: str):
         metroIndex = self.dataDict["columns"].index("Metro")
