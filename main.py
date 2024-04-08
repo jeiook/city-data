@@ -34,18 +34,22 @@ def zoriCityDriver():
 
 
 def censusDriver():
-    placesInLaMetroDataProcessor = PlacesInMetroDataProcessor(
-        CensusTsvFileReader(
-            "data/cities_in_los_angeles.tsv").getDataDictFromFile(),
-        CensusTsvFileReader(
-            "data/places_in_california.tsv").getDataDictFromFile()
-    )
-    cityPlaceData = placesInLaMetroDataProcessor.getCityPlaceData()
-    dataRetriever = ApiDataRetriever()
-    routeHandler = CensusApiRouteHandler()
-    outputHandler = FileOutputHandler("data/walked_of_places.tsv")
-    outputHandler.outputListData(dataRetriever.getDataFromAPIRequestToPath(
-        routeHandler.getTotalWalkedRouteOfPlaces([place for _, place in cityPlaceData[1]])))
+    fileReader = CensusTsvFileReader("data/walked_of_places.tsv")
+    dataDict = fileReader.getDataDictFromFile()
+    placeNames = list(map(
+        lambda row: row[0][:row[0].find("city")].strip()
+        if row[0].find("city") > -1
+        else " ".join(row[0][:row[0].find(",")].split(" ")[:-1]),
+        dataDict["rows"]
+    ))
+    fileReader = ZoriFileReader("data/zori_city.csv")
+    cityZoriDataProcessor = CityZoriDataProcessor(
+        fileReader.getDataDictFromFile())
+    yearStart = 2022
+    yearEnd = 2024
+    for name in placeNames:
+        print(cityZoriDataProcessor.getAverageZORIOfCityOverRange(
+            name, yearStart, yearEnd))
 
 
 def main():
