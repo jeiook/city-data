@@ -26,5 +26,5 @@ class CensusApiRouteHandler(ApiRouteHandler):
     def getListPlacesInCalifornia(self):
         return self._getFullApiPath("/acs/acs1/subject?get=NAME,S0101_C01_001E&for=place:*&in=state:06")
 
-    def getTotalWalkedRouteOfPlace(self, place: str):
-        return self._getFullApiPath(f'/acs/acs1/subject?get=PLACE,S0801_C01_010E&for=place:{place}&in=state:06')
+    def getTotalWalkedRouteOfPlaces(self, places: list[str]):
+        return self._getFullApiPath(f'/acs/acs1/subject?get=NAME,S0801_C01_010E&for=place:{",".join(places)}&in=state:06')

@@ -15,6 +15,16 @@ class CityZoriDataProcessor(ZoriDataProcessor):
         regionNameIndex = self.dataDict["columns"].index("RegionName")
         return row[regionNameIndex]
 
+    def _getRowByCityName(self, cityName: str):
+        regionNameIndex = self.dataDict["columns"].index("RegionName")
+        rowsOfCity = list(filter(
+            lambda row: cityName.lower() in row[regionNameIndex].lower(),
+            self.dataDict["rows"]
+        ))
+        if not rowsOfCity:
+            raise KeyError(f'No city with name {cityName}')
+        return rowsOfCity[0]
+
     def listAverageZORIOfLocationsInMetroOverRange(self, metroName: str, yearStart: int | None = None, yearEnd: int | None = None):
         rowsInMetro = self._getRowsByMetroName(metroName)
         for row in rowsInMetro:
@@ -22,3 +32,10 @@ class CityZoriDataProcessor(ZoriDataProcessor):
             averageZORI = self.getAverageZORIOfRowOverRange(
                 row, yearStart, yearEnd)
             print(f'{region} - {averageZORI}')
+
+    def getAverageZORIOfCityOverRange(self, cityName: str, yearStart: int | None = None, yearEnd: int | None = None) -> float:
+        return self.getAverageZORIOfRowOverRange(
+            self._getRowByCityName(cityName),
+            yearStart,
+            yearEnd
+        )

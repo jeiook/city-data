@@ -40,10 +40,12 @@ def censusDriver():
         CensusTsvFileReader(
             "data/places_in_california.tsv").getDataDictFromFile()
     )
-    data = placesInLaMetroDataProcessor.getCityPlaceData()
-    print("columns:", data[0])
-    for row in data[1]:
-        print(row)
+    cityPlaceData = placesInLaMetroDataProcessor.getCityPlaceData()
+    dataRetriever = ApiDataRetriever()
+    routeHandler = CensusApiRouteHandler()
+    outputHandler = FileOutputHandler("data/walked_of_places.tsv")
+    outputHandler.outputListData(dataRetriever.getDataFromAPIRequestToPath(
+        routeHandler.getTotalWalkedRouteOfPlaces([place for _, place in cityPlaceData[1]])))
 
 
 def main():
