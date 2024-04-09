@@ -36,10 +36,20 @@ def zoriCityDriver():
 def censusDriver():
     fileReader = CensusTsvFileReader("data/walk_score_of_cities.tsv")
     dataDict = fileReader.getDataDictFromFile()
-    print("columns:", dataDict["columns"])
-    for row in dataDict["rows"]:
-        print(row[1])
-    print(f'{len(dataDict["rows"])} rows')
+    citiesInLaMap = map(lambda row: row[0], dataDict["rows"])
+    cityZoriFileReader = ZoriFileReader("data/zori_city.csv")
+    cityZoriDataProcessor = CityZoriDataProcessor(
+        cityZoriFileReader.getDataDictFromFile())
+    cityZoris = []
+    for cityName in citiesInLaMap:
+        cityZoris.append((
+            cityName,
+            cityZoriDataProcessor.getAverageZORIOfCityOverRange(
+                cityName, 2022, 2024)
+        ))
+    for cityZori in cityZoris:
+        print(cityZori[1])
+    print(f'{len(cityZoris)} rows')
 
 
 def main():

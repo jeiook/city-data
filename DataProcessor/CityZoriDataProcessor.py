@@ -15,10 +15,12 @@ class CityZoriDataProcessor(ZoriDataProcessor):
         regionNameIndex = self.dataDict["columns"].index("RegionName")
         return row[regionNameIndex]
 
-    def _getRowByCityName(self, cityName: str):
+    def _getRowByCityName(self, cityName: str, stateName: str = "CA"):
         regionNameIndex = self.dataDict["columns"].index("RegionName")
+        stateNameIndex = self.dataDict["columns"].index("StateName")
         rowsOfCity = list(filter(
-            lambda row: cityName.lower() in row[regionNameIndex].lower(),
+            lambda row: row[stateNameIndex] == stateName and cityName.lower(
+            ) in row[regionNameIndex].lower(),
             self.dataDict["rows"]
         ))
         if not rowsOfCity:
