@@ -1,5 +1,4 @@
 from DataProcessor.ZoriDataProcessor import ZoriDataProcessor
-from FileReader.ZoriFileReader.ZoriFileReader import ZoriFileReader
 
 
 class CityZoriDataProcessor(ZoriDataProcessor):
@@ -15,7 +14,7 @@ class CityZoriDataProcessor(ZoriDataProcessor):
         regionNameIndex = self.dataDict["columns"].index("RegionName")
         return row[regionNameIndex]
 
-    def _getRowByCityName(self, cityName: str, stateName: str = "CA"):
+    def _getRowByCityAndState(self, cityName: str, stateName: str):
         regionNameIndex = self.dataDict["columns"].index("RegionName")
         stateNameIndex = self.dataDict["columns"].index("StateName")
         rowsOfCity = list(filter(
@@ -35,9 +34,9 @@ class CityZoriDataProcessor(ZoriDataProcessor):
                 row, yearStart, yearEnd)
             print(f'{region} - {averageZORI}')
 
-    def getAverageZORIOfCityOverRange(self, cityName: str, yearStart: int | None = None, yearEnd: int | None = None) -> float:
+    def getAverageZORIOfCityInStateOverRangee(self, cityName: str, stateName: str = "CA", yearStart: int | None = None, yearEnd: int | None = None) -> float:
         return self.getAverageZORIOfRowOverRange(
-            self._getRowByCityName(cityName),
+            self._getRowByCityAndState(cityName, stateName),
             yearStart,
             yearEnd
         )
