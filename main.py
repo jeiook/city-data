@@ -1,4 +1,5 @@
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
+from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
@@ -34,21 +35,19 @@ def zoriCityDriver():
 
 
 def censusDriver():
-    pass
-    # fileReader = CensusTsvFileReader("data/walked_of_top_cities.tsv")
-    # dataDict = fileReader.getDataDictFromFile()
-    # row format: [NAME, S0801_C01_010E, state, place]
-    # for row in dataDict["rows"]:
-    #     print(row[1])
-    # print("acs walked percentage of", len(
-    #     dataDict["rows"]), "cities from walked_of_top_cities.tsv")
+    routeHandler = CensusApiRouteHandler()
+    dataRetriever = ApiDataRetriever[CensusApiData]()
+    data = dataRetriever.getDataFromAPIRequestToPath(
+        routeHandler.getListStates())
+    # notice the type hint for data
+    print(data)
 
 
 def main():
     # uncomment the driver function to be run
     # zoriMetroDriver()
-    zoriCityDriver()
-    # censusDriver()
+    # zoriCityDriver()
+    censusDriver()
 
 
 main()
