@@ -1,3 +1,4 @@
+from ApiDataExtractor.CensusStateMappingsApiDataExtractor import CensusStateMappingsApiDataExtractor
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
@@ -43,11 +44,26 @@ def censusDriver():
     print(data)
 
 
+def dataExtractorDriver():
+    extractor = CensusStateMappingsApiDataExtractor()
+    while True:
+        print("enter a state name or press q to quit")
+        inputText = input()
+        if inputText == "q":
+            break
+        try:
+            print(f'{extractor.getStateCode(inputText)
+                     } is the state code for {inputText}')
+        except KeyError:
+            print(f'Oops, we couldn\'t find an entry for {inputText}')
+
+
 def main():
     # uncomment the driver function to be run
     # zoriMetroDriver()
     # zoriCityDriver()
-    censusDriver()
+    # censusDriver()
+    dataExtractorDriver()
 
 
 main()
