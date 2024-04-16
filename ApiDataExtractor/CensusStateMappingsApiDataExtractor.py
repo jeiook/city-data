@@ -1,3 +1,4 @@
+from typing import Iterable
 from ApiDataExtractor.ApiDataExtractor import ApiDataExtractor
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
@@ -10,10 +11,10 @@ class CensusStateMappingsApiDataExtractor(ApiDataExtractor):
         dataRetriever = ApiDataRetriever[CensusApiData]()
         super().__init__(dataRetriever, routeHandler.getListStates(), "CensusStateMappingsObject")
 
-    def _getPropertiesFromData(self, data) -> list[str]:
+    def _getPropertiesFromSourceData(self, data) -> Iterable[str]:
         return data[0]
 
-    def _getListOfValuesFromData(self, data) -> list[list]:
+    def _getListOfValuesFromSourceData(self, data) -> Iterable[Iterable]:
         return data[1:]
 
     def getStateCode(self, fullStateName: str) -> str:
