@@ -1,7 +1,9 @@
-from ApiDataExtractor.CensusStateMappingsApiDataExtractor import CensusStateMappingsApiDataExtractor
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
+from src.DataExtractor.DataExtractor import DataExtractor
+from src.DataExtractor.DataObject.DataObjectBuilder.DictionaryDataObjectBuilder import DictionaryDataObjectBuilder
+from src.DataExtractor.SourceDataRetriever.CsvFileSourceDataRetriever import CsvFileSourceDataRetriever
 from DataProcessor.CityZoriDataProcessor import CityZoriDataProcessor
 from DataProcessor.MetroZoriDataProcessor import MetroZoriDataProcessor
 from DataProcessor.PlacesInMetroDataProcessor import PlacesInMetroDataProcessor
@@ -45,17 +47,13 @@ def censusDriver():
 
 
 def dataExtractorDriver():
-    extractor = CensusStateMappingsApiDataExtractor()
-    while True:
-        print("enter a state name or press q to quit")
-        inputText = input()
-        if inputText == "q":
+    extractor = DataExtractor(CsvFileSourceDataRetriever(
+        "data/zori_city.csv"), DictionaryDataObjectBuilder())
+    for dataObject in extractor:
+        print(dataObject.getValueAtProperty("RegionName"))
+        key = input("Press any key except q to continue:\n")
+        if key == "q":
             break
-        try:
-            print(f'{extractor.getStateCode(inputText)
-                     } is the state code for {inputText}')
-        except KeyError:
-            print(f'Oops, we couldn\'t find an entry for {inputText}')
 
 
 def main():
