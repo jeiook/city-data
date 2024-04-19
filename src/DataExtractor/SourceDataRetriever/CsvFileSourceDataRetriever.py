@@ -1,6 +1,6 @@
 import csv
 from typing import Iterable
-from DataExtractor.SourceDataRetriever.SourceDataRetriever import SourceDataRetriever
+from src.DataExtractor.SourceDataRetriever.SourceDataRetriever import SourceDataRetriever
 
 
 class CsvFileSourceDataRetriever(SourceDataRetriever):

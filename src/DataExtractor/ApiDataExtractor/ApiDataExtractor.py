@@ -1,10 +1,9 @@
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
-from DataExtractor.DataExtractor import DataExtractor
+from src.DataExtractor.DataExtractor import DataExtractor
 
 
 class ApiDataExtractor(DataExtractor):
-    def __init__(self, dataRetriever: ApiDataRetriever, route: str, dataTypeName: str) -> None:
-        super().__init__(dataTypeName)
+    def __init__(self, dataRetriever: ApiDataRetriever, route: str) -> None:
         self._dataRetriever = dataRetriever
         self._route = route
 

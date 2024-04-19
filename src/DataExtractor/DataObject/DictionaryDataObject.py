@@ -1,5 +1,5 @@
 from typing import Iterable
-from DataExtractor.DataObject.DataObject import DataObject
+from src.DataExtractor.DataObject.DataObject import DataObject
 
 
 class DictionaryDataObject(DataObject):

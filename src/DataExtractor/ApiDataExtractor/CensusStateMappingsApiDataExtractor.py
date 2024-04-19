@@ -1,5 +1,5 @@
 from typing import Iterable
-from ApiDataExtractor.ApiDataExtractor import ApiDataExtractor
+from src.DataExtractor.ApiDataExtractor.ApiDataExtractor import ApiDataExtractor
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
@@ -9,7 +9,7 @@ class CensusStateMappingsApiDataExtractor(ApiDataExtractor):
     def __init__(self) -> None:
         routeHandler = CensusApiRouteHandler()
         dataRetriever = ApiDataRetriever[CensusApiData]()
-        super().__init__(dataRetriever, routeHandler.getListStates(), "CensusStateMappingsObject")
+        super().__init__(dataRetriever, routeHandler.getListStates())
 
     def _getPropertiesFromSourceData(self, data) -> Iterable[str]:
         return data[0]
