@@ -1,6 +1,7 @@
 from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
+from src.DataExplorer.CensusStateMappingsDataExplorer import CensusStateMappingsDataExplorer
 from src.DataExtractor.DataExtractor import DataExtractor
 from src.DataExtractor.DataObject.DataObjectBuilder.DictionaryDataObjectBuilder import DictionaryDataObjectBuilder
 from src.DataExtractor.SourceDataRetriever.CsvFileSourceDataRetriever import CsvFileSourceDataRetriever
@@ -46,14 +47,17 @@ def censusDriver():
     print(data)
 
 
-def dataExtractorDriver():
-    extractor = DataExtractor(CsvFileSourceDataRetriever(
-        "data/zori_city.csv"), DictionaryDataObjectBuilder())
-    for dataObject in extractor:
-        print(dataObject.getValueAtProperty("RegionName"))
-        key = input("Press any key except q to continue:\n")
+def dataExplorerDriver():
+    explorer = CensusStateMappingsDataExplorer(CensusApiRouteHandler())
+    while True:
+        key = input("Type in a state name or q to quit:\n")
         if key == "q":
             break
+        try:
+            print(f'State {key} has code {explorer.getStateCode(key)}')
+        except KeyError:
+            print(f'State {key} does not exist')
+    print("end of program")
 
 
 def main():
@@ -61,7 +65,7 @@ def main():
     # zoriMetroDriver()
     # zoriCityDriver()
     # censusDriver()
-    dataExtractorDriver()
+    dataExplorerDriver()
 
 
 main()
