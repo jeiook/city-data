@@ -1,6 +1,6 @@
 from dotenv import dotenv_values
 
-from ApiDataRetriever.ApiRouteHandler import ApiRouteHandler
+from src.ApiDataRetriever.ApiRouteHandler import ApiRouteHandler
 
 _YEAR = 2022
 _BASE_API_URL = "https://api.census.gov/data/"

@@ -1,5 +1,5 @@
-from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
-from ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
+from src.ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
+from src.ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
 from src.DataExtractor.DataObject.DataObjectBuilder.DictionaryDataObjectBuilder import DictionaryDataObjectBuilder
 from src.DataExtractor.SourceDataRetriever.ApiSourceDataRetriever import ApiSourceDataRetriever
 from src.DataExtractor.DataExtractor import DataExtractor

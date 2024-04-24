@@ -1,5 +1,5 @@
 from typing import Iterable
-from ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
+from src.ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from src.DataExtractor.SourceDataRetriever.SourceDataRetriever import SourceDataRetriever
 
 
