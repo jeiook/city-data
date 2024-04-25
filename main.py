@@ -1,3 +1,4 @@
+from src.DataExplorer.ZoriMetroDataExplorer import ZoriMetroDataExplorer
 from src.ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from src.ApiDataRetriever.Census.CensusApiDataType import CensusApiData
 from src.ApiDataRetriever.Census.CensusApiRouteHandler import CensusApiRouteHandler
@@ -5,14 +6,30 @@ from src.DataExplorer.CensusStateMappingsDataExplorer import CensusStateMappings
 
 
 def zoriMetroDriver():
-    yearStart = 2022
-    yearEnd = 2024
-    metroNames = ["rochester", "baltimore", "madison", "st. louis", "chicago", "buffalo", "minneapolis", "philadelphia",
-                  "pittsburgh", "new york", "salt lake city", "boston", "portland", "san francisco", "seattle", "los angeles", "austin, tx"]
-    # for metroName in metroNames:
-    #     row = dataProcessor.getRowByLocationName(metroName)
-    #     print(metroName, "-", dataProcessor.getAverageZORIOfRowOverRange(
-    #         row, yearStart, yearEnd))
+    metroNames: list[tuple[str, str]] = [
+        ("rochester", "ny"),
+        ("baltimore", "md"),
+        ("madison", "wi"),
+        ("st. louis", "mo"),
+        ("chicago", "il"),
+        ("buffalo", "ny"),
+        ("minneapolis", "mn"),
+        ("philadelphia", "pa"),
+        ("pittsburgh", "pa"),
+        ("new york", "ny"),
+        ("salt lake city", "ut"),
+        ("boston", "ma"),
+        ("portland", "or"),
+        ("san francisco", "ca"),
+        ("seattle", "wa"),
+        ("los angeles", "ca"),
+        ("austin", "tx")
+    ]
+    dataExplorer = ZoriMetroDataExplorer("data/zori_metro.csv")
+    for city, stateAbbrev in metroNames:
+        rents = dataExplorer.getRentsOfRegionOverRange(city, stateAbbrev)
+        print(f'rent in {city}:', [rents[0], rents[len(
+            rents) // 4], rents[len(rents) // 2], rents[len(rents) * 3 // 4], rents[-1]])
     print("results from zori_metro.csv")
 
 
@@ -48,10 +65,10 @@ def dataExplorerDriver():
 
 def main():
     # uncomment the driver function to be run
-    # zoriMetroDriver()
+    zoriMetroDriver()
     # zoriCityDriver()
     # censusDriver()
-    dataExplorerDriver()
+    # dataExplorerDriver()
 
 
 main()

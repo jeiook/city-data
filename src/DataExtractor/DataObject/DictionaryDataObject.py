@@ -1,4 +1,4 @@
-from typing import Iterable
+from typing import Iterable, Iterator
 from src.DataExtractor.DataObject.DataObject import DataObject
 
 
@@ -12,3 +12,6 @@ class DictionaryDataObject(DataObject):
 
     def getValueAtProperty(self, property: str):
         return self._data[property]
+
+    def __iter__(self) -> Iterator[str]:
+        return self._data.__iter__()
