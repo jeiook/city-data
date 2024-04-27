@@ -1,3 +1,4 @@
+from src.DataExplorer.ZoriCityDataExplorer import ZoriCityDataExplorer
 from src.DataExplorer.ZoriMetroDataExplorer import ZoriMetroDataExplorer
 from src.ApiDataRetriever.ApiDataRetriever import ApiDataRetriever
 from src.ApiDataRetriever.Census.CensusApiDataType import CensusApiData
@@ -34,10 +35,19 @@ def zoriMetroDriver():
 
 
 def zoriCityDriver():
-    yearStart = 2022
-    yearEnd = 2024
-    # dataProcessor.listAverageZORIOfLocationsInMetroOverRange(
-    #     "los angeles", yearStart, yearEnd)
+    dataExplorer = ZoriCityDataExplorer("data/zori_city.csv")
+    cityNames: list[tuple[str, str]] = [
+        ("birmingham", "al"),
+        ("scottsdale", "az"),
+        ("burbank", "ca"),
+        ("oakland", "ca"),
+        ("pittsburgh", "pa"),
+        ("buffalo", "ny")
+    ]
+    for city, stateAbbrev in cityNames:
+        rents = dataExplorer.getRentsOfRegionOverRange(city, stateAbbrev)
+        print(f'rent in {city}:', [rents[0], rents[len(
+            rents) // 4], rents[len(rents) // 2], rents[len(rents) * 3 // 4], rents[-1]])
     print("results from zori_city.csv")
 
 
@@ -65,8 +75,8 @@ def dataExplorerDriver():
 
 def main():
     # uncomment the driver function to be run
-    zoriMetroDriver()
-    # zoriCityDriver()
+    # zoriMetroDriver()
+    zoriCityDriver()
     # censusDriver()
     # dataExplorerDriver()
 
